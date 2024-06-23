@@ -98,19 +98,28 @@ input {
     border-radius: 0.25rem;
 }
 
-input:required:invalid{
-    border:2px solid red; 
+input:required:focus:invalid{
+    border:2px solid red !important; 
 }
 input:required:valid{
     border:2px solid green; 
 }
-input:required{
-    border:1px solid #E5E7EB; 
+input:required:invalid{
+    border:1px solid #E5E7EB;
+     
 }
-input:required:focus {
-  border:2px solid #0074cc;
+input:required:valid:focus {
+    outline:none;
+  border:2px solid #0074cc!important;
+  box-shadow: rgba(0, 0, 10, 0.15) 1.95px 1.95px 2.6px;
     /* background-color: green; */
 }
+input:required:invalid:focus {
+    outline:none;
+    border:2px solid #0074cc;
+      /* background-color: green; */
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
 
 input:focus:invalid + span::before {
     content: "Invalid input"; /* Display a message for invalid input */
