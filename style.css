@@ -1,12 +1,18 @@
+@font-face {
+    font-family: norse-bold;
+    src: url('./Norse-Bold.otf');
+    font-weight: bold;
+  }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    
 }
 
 body{
     background-color: #000;
+    font-family: sans-serif;
 }
 
 .background-img{
@@ -25,6 +31,7 @@ body{
     padding-bottom: 1rem;
     display: flex;
     justify-content:center;
+    font-family: norse-bold ,sans-serif;
 }
 
 .screen span{
@@ -37,6 +44,7 @@ body{
     width:5rem;
     height:5rem;
    opacity: 1;
+   font-family: norse-bold ,sans-serif;
 }
 
 main{
@@ -67,15 +75,22 @@ main{
     gap:1.5rem;
     font-weight: bold;
     padding-bottom: 3rem;
+    
+}
+
+.invitation p{
+    font-size: 1rem;
 }
 .form{
     background-color: #fff;
     padding-top: 1rem;
     width: 100%;
+    box-shadow: rgb(0,0,0,0.1) 0 3px  ;
 }
 .form p {
     /* padding-bottom: 1rem; */
     font-weight: bold;
+    font-size: 1.1rem;
 }
 
 form{
@@ -134,6 +149,7 @@ fieldset{
 
 .register {
     flex:1;
+   
 }
 
 .create-account{
@@ -150,6 +166,8 @@ fieldset{
 
 .register span {
     color:#596D48;
+   }
+.register span, p{
     font-weight: bold;
-   
+    font-size: 0.7rem; 
 }
