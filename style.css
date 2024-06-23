@@ -13,13 +13,13 @@ body{
     background: url('https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center bottom no-repeat;
     height: 100%;
     flex:2.5;
+    background-size: cover;
 
 }
 .screen {
-    /* height:5rem; */
     border: 1px soldi white;
     width:100%;
-    background-color: rgb(0,0,0,0.4);
+    background-color: rgb(0,0,0,0.3);
     margin-top:10rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -98,13 +98,22 @@ input {
     border-radius: 0.25rem;
 }
 
-input:invalid{
-    border:1px solid red; 
+input:required:invalid{
+    border:2px solid red; 
+}
+input:required:valid{
+    border:2px solid green; 
+}
+input:required{
+    border:1px solid #E5E7EB; 
+}
+input:required:focus {
+  border:2px solid #0074cc;
+    /* background-color: green; */
 }
 
-input:focus {
-    border:1px solid blue;
-    /* background-color: green; */
+input:focus:invalid + span::before {
+    content: "Invalid input"; /* Display a message for invalid input */
 }
 
 fieldset{
@@ -112,7 +121,6 @@ fieldset{
     flex-direction: column;
     gap:0.2rem;
     border: none;
-    border:1px soldi green;
 }
 
 .register {
@@ -127,9 +135,12 @@ fieldset{
     padding-left: 1rem;
     color:#fff;
     border-radius: 0.4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .register span {
     color:#596D48;
     font-weight: bold;
+   
 }
